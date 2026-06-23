@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Lavender Butterfly — Crystals, minerals, geodes, tumbled stones, jewelry, and gifts. Located inside Sierra Vista Mall, Sierra Vista, Arizona." />
+  <title>The Lavender Butterfly | Crystals & Minerals | Sierra Vista, AZ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ====================================================
+       Navigation
+       ==================================================== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <!-- Tiny inline butterfly logo mark -->
+        <svg width="28" height="22" viewBox="0 0 28 22" fill="none" aria-hidden="true">
+          <path d="M14 11 C10 6, 2 4, 1 9 C0 14, 8 16, 14 11Z" fill="#b8a9d4" opacity="0.85"/>
+          <path d="M14 11 C18 6, 26 4, 27 9 C28 14, 20 16, 14 11Z" fill="#b8a9d4" opacity="0.85"/>
+          <path d="M14 11 C11 13, 5 15, 5 18 C5 20, 10 20, 14 11Z" fill="#c9a84c" opacity="0.7"/>
+          <path d="M14 11 C17 13, 23 15, 23 18 C23 20, 18 20, 14 11Z" fill="#c9a84c" opacity="0.7"/>
+          <line x1="14" y1="4" x2="14" y2="20" stroke="#9d8fba" stroke-width="1.2"/>
+        </svg>
+        <div class="nav__logo-text">
+          The Lavender Butterfly
+          <span>Sierra Vista, AZ</span>
+        </div>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link active">Home</a></li>
+        <li><a href="shop.html" class="nav__link">Shop</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+
+      <a href="contact.html" class="nav__cta">Visit Us</a>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <a href="index.html" class="nav__link">Home</a>
+    <a href="shop.html" class="nav__link">Shop</a>
+    <a href="about.html" class="nav__link">About</a>
+    <a href="contact.html" class="nav__link">Contact</a>
+    <a href="contact.html" class="btn btn--outline" style="margin-top:1rem;">Visit Us</a>
+  </div>
+
+  <!-- ====================================================
+       Hero
+       ==================================================== -->
+  <section class="hero" aria-label="Welcome">
+    <div class="hero__inner">
+      <!-- Text Content -->
+      <div class="hero__text">
+        <div class="hero__eyebrow">Sierra Vista Mall, AZ</div>
+        <h1 class="hero__title">
+          Where Every<br />
+          <em>Stone Tells</em><br />
+          a Story
+        </h1>
+        <p class="hero__tagline">
+          Hand-selected crystals, minerals, geodes, and gifts — curated by Jen for those who feel the earth's energy in every stone.
+        </p>
+        <div class="hero__actions">
+          <a href="shop.html" class="btn btn--primary">Explore Collection</a>
+          <a href="about.html" class="btn btn--ghost">Meet Jen</a>
+        </div>
+      </div>
+
+      <!-- Butterfly Visual -->
+      <div class="hero__visual">
+        <div class="hero__glow"></div>
+        <div class="butterfly-video-wrap" aria-hidden="true">
+          <video
+            class="butterfly-video"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+          >
+            <source src="images/butterfly-hero.webm" type="video/webm" />
+            <source src="images/butterfly-hero.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       Featured Categories
+       ==================================================== -->
+  <section class="categories section" aria-labelledby="cat-heading">
+    <div class="container">
+      <div class="text-center reveal">
+        <p class="hero__eyebrow" style="justify-content:center;">What We Carry</p>
+        <h2 id="cat-heading">Our Collections</h2>
+        <div class="divider"></div>
+        <p style="max-width:48ch;margin-inline:auto;">
+          Over 330 one-of-a-kind pieces — each one hand-selected, each one waiting to find its person.
+        </p>
+      </div>
+
+      <div class="categories__grid">
+        <div class="category-card reveal reveal-delay-1">
+          <span class="category-card__icon">💎</span>
+          <h3 class="category-card__title">Crystals</h3>
+          <p class="category-card__desc">Raw, polished, and natural formations. Amethyst cathedrals, quartz clusters, selenite wands, and more rare finds.</p>
+          <span class="category-card__count">Raw &amp; Polished</span>
+        </div>
+        <div class="category-card reveal reveal-delay-2">
+          <span class="category-card__icon">🪨</span>
+          <h3 class="category-card__title">Minerals</h3>
+          <p class="category-card__desc">Specimen-grade minerals from around the world. Pyrite suns, malachite slabs, calcite formations, and collector pieces.</p>
+          <span class="category-card__count">Worldwide Specimens</span>
+        </div>
+        <div class="category-card reveal reveal-delay-3">
+          <span class="category-card__icon">💍</span>
+          <h3 class="category-card__title">Jewelry</h3>
+          <p class="category-card__desc">Crystal-set pendants, wire-wrapped rings, stone bracelets, and wearable earth art. Every piece tells a story.</p>
+          <span class="category-card__count">Wearable Earth Art</span>
+        </div>
+        <div class="category-card reveal reveal-delay-4">
+          <span class="category-card__icon">🎁</span>
+          <h3 class="category-card__title">Gifts</h3>
+          <p class="category-card__desc">Tumbled stones, crystal sets, incense, journals, and curated gift bundles. Perfect for any occasion or intention.</p>
+          <span class="category-card__count">Curated &amp; Gifted</span>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top:var(--space-2xl);">
+        <a href="shop.html" class="btn btn--outline">Browse All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       Quote / Passion Section
+       ==================================================== -->
+  <section class="quote-section section" aria-label="Our philosophy">
+    <div class="container">
+      <div class="blockquote reveal">
+        <p class="blockquote__text">
+          "Every crystal carries the memory of the earth — when you hold one, you're holding billions of years of story in the palm of your hand."
+        </p>
+        <div class="divider"></div>
+        <span class="blockquote__attr">— Jen, Owner &amp; Curator</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       Visit Strip
+       ==================================================== -->
+  <div class="visit-strip" aria-label="Location and hours">
+    <div class="container">
+      <div class="visit-strip__inner">
+        <!-- Location -->
+        <div>
+          <div class="visit-info__label">Find Us</div>
+          <div class="visit-info__value">Sierra Vista Mall</div>
+          <div class="visit-info__sub">
+            2200 El Mercado Loop<br />
+            Sierra Vista, Arizona 85635
+          </div>
+          <a href="contact.html" class="btn btn--outline" style="margin-top:var(--space-lg);padding:0.55rem 1.25rem;font-size:0.7rem;">Get Directions &rarr;</a>
+        </div>
+
+        <div class="visit-strip__divider"></div>
+
+        <!-- Hours -->
+        <div>
+          <div class="visit-info__label">Store Hours</div>
+          <div class="visit-strip__hours">
+            <div class="hours-row"><strong>Mon – Thu</strong></div>
+            <div class="hours-row">10:00 AM – 8:00 PM</div>
+            <div class="hours-row"><strong>Fri – Sat</strong></div>
+            <div class="hours-row">10:00 AM – 9:00 PM</div>
+            <div class="hours-row"><strong>Sunday</strong></div>
+            <div class="hours-row">11:00 AM – 6:00 PM</div>
+          </div>
+        </div>
+
+        <div class="visit-strip__divider"></div>
+
+        <!-- Phone / Social -->
+        <div>
+          <div class="visit-info__label">Reach Out</div>
+          <div class="visit-info__value">
+            <a href="tel:+15205550147" style="color:inherit;">(520) 555-0147</a>
+          </div>
+          <div class="visit-info__sub" style="margin-top:var(--space-sm);">
+            Call ahead to check availability<br />on specific pieces.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================
+       Footer
+       ==================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand -->
+        <div>
+          <div class="footer__brand-name">The Lavender Butterfly</div>
+          <p class="footer__brand-tagline">
+            A curated crystal, mineral, and gift shop nestled inside the Sierra Vista Mall. Come in with curiosity, leave with something that speaks to you.
+          </p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Facebook" title="Follow us on Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Instagram" title="Follow us on Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Pinterest" title="Follow us on Pinterest">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <div class="footer__col-title">Explore</div>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="shop.html" class="footer__link">Shop</a></li>
+            <li><a href="about.html" class="footer__link">About Jen</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Collections -->
+        <div>
+          <div class="footer__col-title">Collections</div>
+          <ul class="footer__links" role="list">
+            <li><a href="shop.html#crystals" class="footer__link">Crystals</a></li>
+            <li><a href="shop.html#minerals" class="footer__link">Minerals</a></li>
+            <li><a href="shop.html#jewelry" class="footer__link">Jewelry</a></li>
+            <li><a href="shop.html#gifts" class="footer__link">Gifts &amp; Sets</a></li>
+          </ul>
+        </div>
+
+        <!-- Info -->
+        <div>
+          <div class="footer__col-title">Visit</div>
+          <ul class="footer__links" role="list">
+            <li class="footer__link">Sierra Vista Mall</li>
+            <li class="footer__link">2200 El Mercado Loop</li>
+            <li class="footer__link">Sierra Vista, AZ 85635</li>
+            <li><a href="tel:+15205550147" class="footer__link" style="margin-top:var(--space-sm);display:block;">(520) 555-0147</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          &copy; 2025 The Lavender Butterfly. All rights reserved.
+        </p>
+        <p class="footer__copy">
+          Designed with love in Sierra Vista, Arizona
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

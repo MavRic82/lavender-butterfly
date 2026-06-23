@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact The Lavender Butterfly — find us inside Sierra Vista Mall, or send us a message about any piece in our collection." />
+  <title>Contact | The Lavender Butterfly | Sierra Vista, AZ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .form-success {
+      display: none;
+      background: var(--surface);
+      border: 1px solid rgba(184, 169, 212, 0.3);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      text-align: center;
+    }
+    .form-success.visible {
+      display: block;
+    }
+    .form-success__icon { font-size: 3rem; margin-bottom: var(--space-md); }
+    .form-success__title {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      color: var(--text-primary);
+      margin-bottom: var(--space-sm);
+    }
+    .form-success__text {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .hours-full {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .hours-full__header {
+      background: rgba(201, 168, 76, 0.08);
+      border-bottom: 1px solid var(--border);
+      padding: var(--space-md) var(--space-lg);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+    }
+    .hours-full__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--space-sm) var(--space-lg);
+      border-bottom: 1px solid rgba(184, 169, 212, 0.06);
+      font-size: 0.9rem;
+    }
+    .hours-full__row:last-child { border-bottom: none; }
+    .hours-full__day { color: var(--text-muted); }
+    .hours-full__time { color: var(--text-primary); font-weight: 400; }
+    .hours-full__closed { color: var(--iris-dim); font-style: italic; }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-md);
+      transition: border-color var(--duration);
+    }
+    .contact-card:hover { border-color: var(--border-gold); }
+    .contact-card__icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: rgba(201, 168, 76, 0.1);
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    .contact-card__label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 3px;
+    }
+    .contact-card__value {
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      line-height: 1.5;
+    }
+    .contact-card__value a {
+      color: inherit;
+      transition: color var(--duration-fast);
+    }
+    .contact-card__value a:hover { color: var(--iris); }
+    .contact-card__sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .map-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+      margin-top: var(--space-lg);
+    }
+
+    @media (max-width: 640px) {
+      .map-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <svg width="28" height="22" viewBox="0 0 28 22" fill="none" aria-hidden="true">
+          <path d="M14 11 C10 6, 2 4, 1 9 C0 14, 8 16, 14 11Z" fill="#b8a9d4" opacity="0.85"/>
+          <path d="M14 11 C18 6, 26 4, 27 9 C28 14, 20 16, 14 11Z" fill="#b8a9d4" opacity="0.85"/>
+          <path d="M14 11 C11 13, 5 15, 5 18 C5 20, 10 20, 14 11Z" fill="#c9a84c" opacity="0.7"/>
+          <path d="M14 11 C17 13, 23 15, 23 18 C23 20, 18 20, 14 11Z" fill="#c9a84c" opacity="0.7"/>
+          <line x1="14" y1="4" x2="14" y2="20" stroke="#9d8fba" stroke-width="1.2"/>
+        </svg>
+        <div class="nav__logo-text">
+          The Lavender Butterfly
+          <span>Sierra Vista, AZ</span>
+        </div>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="shop.html" class="nav__link">Shop</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="contact.html" class="nav__link active">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav__cta">Visit Us</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <a href="index.html" class="nav__link">Home</a>
+    <a href="shop.html" class="nav__link">Shop</a>
+    <a href="about.html" class="nav__link">About</a>
+    <a href="contact.html" class="nav__link">Contact</a>
+    <a href="contact.html" class="btn btn--outline" style="margin-top:1rem;">Visit Us</a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <p class="hero__eyebrow" style="justify-content:center;">We'd Love to Hear From You</p>
+      <h1 style="font-size:clamp(2.4rem,5vw,4rem);">Get in Touch</h1>
+      <div class="divider"></div>
+      <p class="lead" style="color:var(--text-muted);max-width:46ch;margin-inline:auto;">
+        Ask about a specific piece, check availability, or just say hello. Jen personally responds to every message.
+      </p>
+    </div>
+  </div>
+
+  <!-- Contact Main Section -->
+  <section class="section" aria-label="Contact form and information">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact Form -->
+        <div class="reveal">
+          <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent-gold);margin-bottom:var(--space-md);">Send a Message</p>
+          <h2 style="margin-bottom:var(--space-md);">Write to Jen</h2>
+          <div class="divider--left"></div>
+          <p style="margin-bottom:var(--space-xl);">
+            Whether you spotted something in our collection and want to know if it's still available, or you're looking for something specific — we're happy to help.
+          </p>
+
+          <!-- Form -->
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Jane Smith" autocomplete="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="jane@example.com" autocomplete="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone" class="form-label">Phone <span style="font-weight:300;text-transform:none;letter-spacing:0;">(optional)</span></label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="(520) 555-0100" autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label for="subject" class="form-label">What's on Your Mind?</label>
+              <select id="subject" name="subject" class="form-input" required style="-webkit-appearance:none;cursor:pointer;background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239d8fba' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:right 1rem center;">
+                <option value="" disabled selected>Select a topic…</option>
+                <option value="inquiry">Ask about a specific piece</option>
+                <option value="hold">Request a hold on an item</option>
+                <option value="availability">Check current inventory</option>
+                <option value="visit">Plan my visit</option>
+                <option value="wholesale">Wholesale inquiry</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea id="message" name="message" class="form-textarea" placeholder="Tell us what you're looking for, or describe the piece you saw…" required></textarea>
+            </div>
+            <p class="form-note">We typically respond within 24–48 hours. For faster answers, call us directly.</p>
+            <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;margin-top:var(--space-sm);">
+              Send Message
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+
+          <!-- Success Message (shown by JS after submit) -->
+          <div class="form-success" id="formSuccess" aria-live="polite">
+            <div class="form-success__icon">🦋</div>
+            <div class="form-success__title">Message Sent!</div>
+            <p class="form-success__text">Thank you for reaching out. Jen will get back to you within 24–48 hours. In the meantime, feel free to stop by the shop — we'd love to see you.</p>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+
+          <!-- Contact Cards -->
+          <div class="reveal">
+            <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent-gold);margin-bottom:var(--space-lg);">Find Us</p>
+            <div style="display:flex;flex-direction:column;gap:var(--space-sm);">
+              <div class="contact-card">
+                <div class="contact-card__icon">📍</div>
+                <div>
+                  <div class="contact-card__label">Location</div>
+                  <div class="contact-card__value">
+                    Sierra Vista Mall<br />
+                    2200 El Mercado Loop<br />
+                    Sierra Vista, AZ 85635
+                  </div>
+                  <div class="contact-card__sub">Inside the mall, near the food court</div>
+                </div>
+              </div>
+              <div class="contact-card">
+                <div class="contact-card__icon">📞</div>
+                <div>
+                  <div class="contact-card__label">Phone</div>
+                  <div class="contact-card__value">
+                    <a href="tel:+15205550147">(520) 555-0147</a>
+                  </div>
+                  <div class="contact-card__sub">Call during store hours for fastest response</div>
+                </div>
+              </div>
+              <div class="contact-card">
+                <div class="contact-card__icon">✉️</div>
+                <div>
+                  <div class="contact-card__label">Email</div>
+                  <div class="contact-card__value">
+                    <a href="mailto:jen@thelavenderbutterfly.com">jen@thelavenderbutterfly.com</a>
+                  </div>
+                  <div class="contact-card__sub">Response within 24–48 hours</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hours -->
+          <div class="reveal reveal-delay-1">
+            <div class="hours-full">
+              <div class="hours-full__header">Store Hours</div>
+              <div class="hours-full__row">
+                <span class="hours-full__day">Monday</span>
+                <span class="hours-full__time">10:00 AM – 8:00 PM</span>
+              </div>
+              <div class="hours-full__row">
+                <span class="hours-full__day">Tuesday</span>
+                <span class="hours-full__time">10:00 AM – 8:00 PM</span>
+              </div>
+              <div class="hours-full__row">
+                <span class="hours-full__day">Wednesday</span>
+                <span class="hours-full__time">10:00 AM – 8:00 PM</span>
+              </div>
+              <div class="hours-full__row">
+                <span class="hours-full__day">Thursday</span>
+                <span class="hours-full__time">10:00 AM – 8:00 PM</span>
+              </div>
+              <div class="hours-full__row">
+                <span class="hours-full__day">Friday</span>
+                <span class="hours-full__time">10:00 AM – 9:00 PM</span>
+              </div>
+              <div class="hours-full__row">
+                <span class="hours-full__day">Saturday</span>
+                <span class="hours-full__time">10:00 AM – 9:00 PM</span>
+              </div>
+              <div class="hours-full__row">
+                <span class="hours-full__day">Sunday</span>
+                <span class="hours-full__time">11:00 AM – 6:00 PM</span>
+              </div>
+            </div>
+            <p style="font-size:0.78rem;color:var(--iris-dim);margin-top:var(--space-sm);">Hours may vary on holidays. Call ahead to confirm.</p>
+          </div>
+
+          <!-- Map Placeholder -->
+          <div class="reveal reveal-delay-2">
+            <div class="map-placeholder" role="img" aria-label="Map showing Sierra Vista Mall location">
+              <div class="map-placeholder__icon">🗺️</div>
+              <div class="map-placeholder__text">
+                <strong style="color:var(--text-primary);display:block;margin-bottom:4px;">Sierra Vista Mall</strong>
+                2200 El Mercado Loop, Sierra Vista, AZ
+              </div>
+              <a href="https://maps.google.com/?q=Sierra+Vista+Mall+Sierra+Vista+AZ" target="_blank" rel="noopener noreferrer">Open in Google Maps &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Strip -->
+  <section class="section--tight" style="background:var(--bg-deeper);border-top:1px solid var(--border);" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:var(--space-2xl);">
+        <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent-gold);">Common Questions</p>
+        <h2 id="faq-heading" style="margin-top:var(--space-sm);">Good to Know</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="map-grid">
+        <div class="passion-item reveal" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-lg);display:flex;gap:var(--space-md);align-items:flex-start;transition:border-color var(--duration);">
+          <span style="font-size:1.5rem;flex-shrink:0;">🏷️</span>
+          <div>
+            <div style="font-family:var(--font-display);font-size:1.05rem;color:var(--text-primary);margin-bottom:var(--space-xs);">Do you have prices online?</div>
+            <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.65;">Each piece is one-of-a-kind and priced individually. We don't publish prices online, but reach out about any item — we're happy to share pricing and photos.</p>
+          </div>
+        </div>
+        <div class="passion-item reveal reveal-delay-1" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-lg);display:flex;gap:var(--space-md);align-items:flex-start;transition:border-color var(--duration);">
+          <span style="font-size:1.5rem;flex-shrink:0;">📦</span>
+          <div>
+            <div style="font-family:var(--font-display);font-size:1.05rem;color:var(--text-primary);margin-bottom:var(--space-xs);">Do you ship?</div>
+            <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.65;">We primarily serve our local Sierra Vista community in person. Contact us to discuss special arrangements for shipping on select pieces.</p>
+          </div>
+        </div>
+        <div class="passion-item reveal" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-lg);display:flex;gap:var(--space-md);align-items:flex-start;transition:border-color var(--duration);">
+          <span style="font-size:1.5rem;flex-shrink:0;">⏸️</span>
+          <div>
+            <div style="font-family:var(--font-display);font-size:1.05rem;color:var(--text-primary);margin-bottom:var(--space-xs);">Can you hold a piece for me?</div>
+            <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.65;">Absolutely. Call us or send a message and we can hold most items for 24–48 hours while you plan your visit. Payment on pickup.</p>
+          </div>
+        </div>
+        <div class="passion-item reveal reveal-delay-1" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-lg);display:flex;gap:var(--space-md);align-items:flex-start;transition:border-color var(--duration);">
+          <span style="font-size:1.5rem;flex-shrink:0;">💳</span>
+          <div>
+            <div style="font-family:var(--font-display);font-size:1.05rem;color:var(--text-primary);margin-bottom:var(--space-xs);">What payment do you accept?</div>
+            <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.65;">We accept cash, all major credit cards, and mobile payments. Gift certificates are also available — a beautiful gift for any occasion.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-name">The Lavender Butterfly</div>
+          <p class="footer__brand-tagline">
+            A curated crystal, mineral, and gift shop nestled inside the Sierra Vista Mall.
+          </p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Pinterest">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">Explore</div>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="shop.html" class="footer__link">Shop</a></li>
+            <li><a href="about.html" class="footer__link">About Jen</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Collections</div>
+          <ul class="footer__links" role="list">
+            <li><a href="shop.html" class="footer__link">Crystals</a></li>
+            <li><a href="shop.html" class="footer__link">Minerals</a></li>
+            <li><a href="shop.html" class="footer__link">Jewelry</a></li>
+            <li><a href="shop.html" class="footer__link">Gifts &amp; Sets</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Visit</div>
+          <ul class="footer__links" role="list">
+            <li class="footer__link">Sierra Vista Mall</li>
+            <li class="footer__link">2200 El Mercado Loop</li>
+            <li class="footer__link">Sierra Vista, AZ 85635</li>
+            <li><a href="tel:+15205550147" class="footer__link" style="margin-top:var(--space-sm);display:block;">(520) 555-0147</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 The Lavender Butterfly. All rights reserved.</p>
+        <p class="footer__copy">Designed with love in Sierra Vista, Arizona</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse our collection of crystals, minerals, geodes, jewelry, and gifts at The Lavender Butterfly in Sierra Vista, AZ." />
+  <title>Shop | The Lavender Butterfly | Crystals & Minerals</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .shop-note {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-md);
+      background: var(--surface);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg) var(--space-xl);
+      margin-bottom: var(--space-2xl);
+    }
+    .shop-note__icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+    .shop-note__text { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
+    .shop-note__text strong { color: var(--accent-gold); font-weight: 400; }
+
+    .products-count {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--iris-dim);
+      margin-bottom: var(--space-lg);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <svg width="28" height="22" viewBox="0 0 28 22" fill="none" aria-hidden="true">
+          <path d="M14 11 C10 6, 2 4, 1 9 C0 14, 8 16, 14 11Z" fill="#b8a9d4" opacity="0.85"/>
+          <path d="M14 11 C18 6, 26 4, 27 9 C28 14, 20 16, 14 11Z" fill="#b8a9d4" opacity="0.85"/>
+          <path d="M14 11 C11 13, 5 15, 5 18 C5 20, 10 20, 14 11Z" fill="#c9a84c" opacity="0.7"/>
+          <path d="M14 11 C17 13, 23 15, 23 18 C23 20, 18 20, 14 11Z" fill="#c9a84c" opacity="0.7"/>
+          <line x1="14" y1="4" x2="14" y2="20" stroke="#9d8fba" stroke-width="1.2"/>
+        </svg>
+        <div class="nav__logo-text">
+          The Lavender Butterfly
+          <span>Sierra Vista, AZ</span>
+        </div>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="shop.html" class="nav__link active">Shop</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav__cta">Visit Us</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <a href="index.html" class="nav__link">Home</a>
+    <a href="shop.html" class="nav__link">Shop</a>
+    <a href="about.html" class="nav__link">About</a>
+    <a href="contact.html" class="nav__link">Contact</a>
+    <a href="contact.html" class="btn btn--outline" style="margin-top:1rem;">Visit Us</a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <p class="hero__eyebrow" style="justify-content:center;">330+ One-of-a-Kind Pieces</p>
+      <h1 style="font-size:clamp(2.4rem,5vw,4rem);">The Collection</h1>
+      <div class="divider"></div>
+      <p class="lead" style="color:var(--text-muted);max-width:50ch;margin-inline:auto;">
+        Each piece is unique. When it's gone, it's gone. See something that speaks to you — reach out, and we'll hold it for you.
+      </p>
+    </div>
+  </div>
+
+  <!-- Shop Section -->
+  <section class="section--tight" aria-label="Product collection">
+    <div class="container">
+
+      <!-- Notice -->
+      <div class="shop-note reveal">
+        <span class="shop-note__icon">✨</span>
+        <div class="shop-note__text">
+          <strong>Every piece is one of a kind.</strong> Our collection changes constantly as new specimens arrive.
+          Click <em>Inquire</em> on any item to ask about availability, or call us at <a href="tel:+15205550147" style="color:var(--iris);">(520) 555-0147</a>.
+          We're happy to hold an item for you.
+        </div>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar reveal" role="group" aria-label="Filter by category" id="filterBar">
+        <button class="filter-btn active" data-filter="all">All Pieces</button>
+        <button class="filter-btn" data-filter="crystal">Crystals</button>
+        <button class="filter-btn" data-filter="mineral">Minerals</button>
+        <button class="filter-btn" data-filter="geode">Geodes</button>
+        <button class="filter-btn" data-filter="jewelry">Jewelry</button>
+        <button class="filter-btn" data-filter="tumbled">Tumbled Stones</button>
+        <button class="filter-btn" data-filter="gift">Gifts &amp; Sets</button>
+      </div>
+
+      <p class="products-count" id="productsCount">Showing 12 pieces</p>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+
+        <!-- Card 1: Amethyst Cathedral -->
+        <article class="product-card reveal" data-category="crystal">
+          <div class="product-card__img">
+            <span class="product-card__placeholder" role="img" aria-label="Amethyst crystal">💜</span>
+            <span class="product-card__badge">Crystal</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__category">Crystal</div>
+            <h2 class="product-card__name">Amethyst Cathedral Geode</h2>
+            <p class="product-card__desc">A stunning Brazilian amethyst cathedral standing 14 inches tall. Deep violet points catch the light from every angle — a true centerpiece for any collection or meditation space.</p>
+            <div class="product-card__footer">
+              <span class="product-card__sku">SKU #LB-0042</span>
+              <button class="btn--inquire" onclick="window.location.href='contact.html?item=Amethyst+Cathedral+Geode'">Inquire</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Labradorite Freeform -->
+        <article class="product-card reveal reveal-delay-1" data-category="mineral">
+          <div class="product-card__img">
+            <span class="product-card__placeholder" role="img" aria-label="Labradorite stone">🪨</span>
+            <span class="product-card__badge">Mineral</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__category">Mineral</div>
+            <h2 class="product-card__name">Labradorite Freeform</h2>
+            <p class="product-card__desc">A hand-polished labradorite freeform from Madagascar, displaying vivid blue, gold, and green labradorescence. No two flash patterns are alike — this one is exceptionally vibrant.</p>
+            <div class="product-card__footer">
+              <span class="product-card__sku">SKU #LB-0117</span>
+              <button class="btn--inquire" onclick="window.location.href='contact.html?item=Labradorite+Freeform'">Inquire</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Druzy Geode Pair -->
+        <article class="product-card reveal reveal-delay-2" data-category="geode">
+          <div class="product-card__img">
+            <span class="product-card__placeholder" role="img" aria-label="Geode">🔮</span>
+            <span class="product-card__badge">Geode</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__category">Geode</div>
+            <h2 class="product-card__name">Celestite Geode Cluster</h2>
+            <p class="product-card__desc">Soft sky-blue celestite crystals formed naturally in a hollow matrix. The pale color and delicate crystal structure make this specimen feel genuinely otherworldly.</p>
+            <div class="product-card__footer">
+              <span class="product-card__sku">SKU #LB-0208</span>
+              <button class="btn--inquire" onclick="window.location.href='contact.html?item=Celestite+Geode+Cluster'">Inquire</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: Crystal Pendant -->
+        <article class="product-card reveal" data-category="jewelry">
+          <div class="product-card__img">
+            <span class="product-card__placeholder" role="img" aria-label="Jewelry pendant">💍</span>
+            <span class="product-card__badge">Jewelry</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__category">Jewelry</div>
+            <h2 class="product-card__name">Rose Quartz Wire-Wrap Pendant</h2>
+            <p class="product-card__desc">A pale pink rose quartz point wrapped in oxidized copper wire with intricate botanical scrollwork. Hangs on an 18-inch copper chain. Handcrafted by a local Arizona artisan.</p>
+            <div class="product-card__footer">
+              <span class="product-card__sku">SKU #LB-0301</span>
+              <button class="btn--inquire" onclick="window.location.href='contact.html?item=Rose+Quartz+Pendant'">Inquire</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5: Tumbled Set -->
+        <article class="product-card reveal reveal-delay-1" data-category="tumbled">
+          <div class="product-card__img">
+            <span class="product-card__placeholder" role="img" aria-label="Tumbled stones">✨</span>
+            <span class="product-card__badge">Tumbled</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__category">Tumbled Stones</div>
+            <h2 class="product-card__name">Chakra Tumbled Stone Set</h2>
+            <p class="product-card__desc">Seven hand-selected tumbled stones aligned to the chakra system — red jasper, carnelian, citrine, green aventurine, aquamarine, lapis lazuli, and amethyst. Presented in a velvet drawstring pouch.</p>
+            <div class="product-card__footer">
+              <span class="product-card__sku">SKU #LB-0189</span>
+              <button class="btn--inquire" onclick="window.location.href='contact.html?item=Chakra+Tumbled+Stone+Set'">Inquire</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6: Gift Set -->
+        <article class="product-card reveal reveal-delay-2" data-category="gift">
+          <div class="product-card__img">
+            <span class="product-card__placeholder" role="img" aria-label="Gift set">🎁</span>
+            <span class="product-card__badge">Gift</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__category">Gift &amp; Set</div>
+            <h2 class="product-card__name">Crystal Starter Gift Box</h2>
+            <p class="product-card__desc">The perfect introduction to the world of crystals. Includes four tumbled stones, a palo santo stick, a selenite charging plate, a crystal identification card, and a handwritten guide from Jen.</p>
+            <div class="product-card__footer">
+              <span class="product-card__sku">SKU #LB-0011</span>
+              <button class="btn--inquire" onclick="window.location.href='contact.html?item=Crystal+Starter+Gift+Box'">Inquire</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 7: Black Tourmaline -->
+        <article class="product-card reveal" data-category="mineral">
+          <div class="product-card__img">
+            <span class="product-card__placeholder" role="img" aria-label="Black tourmaline">🖤</span>
+            <span class="product-card__badge">Mineral</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__category">Mineral</div>
+            <h2 class="product-card__name">Black Tourmaline Raw Chunk</h2>
+            <p class="product-card__desc">A substantial raw black tourmaline chunk displaying vertical striations across the entire surface. Deep black with subtle reflective faces. One of the most requested protective stones in our collection.</p>
+            <div class="product-card__footer">
+              <span class="product-card__sku">SKU #LB-0076</span>
+              <button class="btn--inquire" onclick="window.location.href='contact.html?item=Black+Tourmaline+Raw+Chunk'">Inquire</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 8: Malachite -->
+        <article class="product-card reveal reveal-delay-1" data-category="mineral">
+          <div class="product-card__img">
+            <span class="product-card__placeholder" role="img" aria-label="Malachite">💚</span>
+            <span class="product-card__badge">Mineral</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__category">Mineral</div>
+            <h2 class="product-card__name">Polished Malachite Slab</h2>
+            <p class="product-card__desc">A thin-cut polished malachite slab from the Democratic Republic of Congo. The concentric banding and eye patterns are exceptionally well-defined. A rare gallery-quality display piece.</p>
+            <div class="product-card__footer">
+              <span class="product-card__sku">SKU #LB-0094</span>
+              <button class="btn--inquire" onclick="window.location.href='contact.html?item=Polished+Malachite+Slab'">Inquire</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 9: Moonstone Ring -->
+        <article class="product-card reveal reveal-delay-2" data-category="jewelry">
+          <div class="product-card__img">
+            <span class="product-card__placeholder" role="img" aria-label="Moonstone ring">🌙</span>
+            <span class="product-card__badge">Jewelry</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__category">Jewelry</div>
+            <h2 class="product-card__name">Rainbow Moonstone Sterling Ring</h2>
+            <p class="product-card__desc">A faceted rainbow moonstone set in a hand-forged sterling silver band with hammered texture. The stone displays a crisp blue adularescence. Available in sizes 6–9 — inquire for your size.</p>
+            <div class="product-card__footer">
+              <span class="product-card__sku">SKU #LB-0312</span>
+              <button class="btn--inquire" onclick="window.location.href='contact.html?item=Rainbow+Moonstone+Ring'">Inquire</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 10: Selenite Wand -->
+        <article class="product-card reveal" data-category="crystal">
+          <div class="product-card__img">
+            <span class="product-card__placeholder" role="img" aria-label="Selenite wand">🌫️</span>
+            <span class="product-card__badge">Crystal</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__category">Crystal</div>
+            <h2 class="product-card__name">Desert Rose Selenite Wand</h2>
+            <p class="product-card__desc">A long, naturally formed selenite wand with a silky, pearlescent surface. Sourced from Morocco, this wand features the distinctive fibrous grain unique to high-grade selenite. 10 inches in length.</p>
+            <div class="product-card__footer">
+              <span class="product-card__sku">SKU #LB-0058</span>
+              <button class="btn--inquire" onclick="window.location.href='contact.html?item=Desert+Rose+Selenite+Wand'">Inquire</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 11: Pyrite Cluster -->
+        <article class="product-card reveal reveal-delay-1" data-category="mineral">
+          <div class="product-card__img">
+            <span class="product-card__placeholder" role="img" aria-label="Pyrite cluster">⭐</span>
+            <span class="product-card__badge">Mineral</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__category">Mineral</div>
+            <h2 class="product-card__name">Pyrite Cubic Cluster</h2>
+            <p class="product-card__desc">Natural cubic pyrite crystals in a dramatic cluster formation from Navajún, Spain — the world's finest source of geometric pyrite. Perfectly formed gold cubes stacked in a mirror-bright display.</p>
+            <div class="product-card__footer">
+              <span class="product-card__sku">SKU #LB-0133</span>
+              <button class="btn--inquire" onclick="window.location.href='contact.html?item=Pyrite+Cubic+Cluster'">Inquire</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 12: Aromatherapy Gift -->
+        <article class="product-card reveal reveal-delay-2" data-category="gift">
+          <div class="product-card__img">
+            <span class="product-card__placeholder" role="img" aria-label="Aromatherapy set">🕯️</span>
+            <span class="product-card__badge">Gift</span>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__category">Gift &amp; Set</div>
+            <h2 class="product-card__name">Sacred Space Gift Bundle</h2>
+            <p class="product-card__desc">Everything to set a mindful intention: one raw amethyst, a bundle of white sage, palo santo sticks, a tealight candle, a small abalone shell, and a card explaining each element's significance.</p>
+            <div class="product-card__footer">
+              <span class="product-card__sku">SKU #LB-0022</span>
+              <button class="btn--inquire" onclick="window.location.href='contact.html?item=Sacred+Space+Gift+Bundle'">Inquire</button>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /products-grid -->
+
+      <!-- Call to Action -->
+      <div class="text-center reveal" style="margin-top:var(--space-3xl);padding-top:var(--space-2xl);border-top:1px solid var(--border);">
+        <h3 style="margin-bottom:var(--space-md);">Don't See What You're Looking For?</h3>
+        <p style="max-width:44ch;margin-inline:auto;margin-bottom:var(--space-xl);">
+          With 330+ unique pieces rotating constantly, there's always something new in the shop. Call us or stop by — Jen loves helping people find exactly the right stone.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:var(--space-md);justify-content:center;">
+          <a href="contact.html" class="btn btn--primary">Contact Us</a>
+          <a href="tel:+15205550147" class="btn btn--outline">(520) 555-0147</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-name">The Lavender Butterfly</div>
+          <p class="footer__brand-tagline">
+            A curated crystal, mineral, and gift shop nestled inside the Sierra Vista Mall.
+          </p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Pinterest">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">Explore</div>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="shop.html" class="footer__link">Shop</a></li>
+            <li><a href="about.html" class="footer__link">About Jen</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Collections</div>
+          <ul class="footer__links" role="list">
+            <li><a href="shop.html" class="footer__link">Crystals</a></li>
+            <li><a href="shop.html" class="footer__link">Minerals</a></li>
+            <li><a href="shop.html" class="footer__link">Jewelry</a></li>
+            <li><a href="shop.html" class="footer__link">Gifts &amp; Sets</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Visit</div>
+          <ul class="footer__links" role="list">
+            <li class="footer__link">Sierra Vista Mall</li>
+            <li class="footer__link">2200 El Mercado Loop</li>
+            <li class="footer__link">Sierra Vista, AZ 85635</li>
+            <li><a href="tel:+15205550147" class="footer__link" style="margin-top:var(--space-sm);display:block;">(520) 555-0147</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 The Lavender Butterfly. All rights reserved.</p>
+        <p class="footer__copy">Designed with love in Sierra Vista, Arizona</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
