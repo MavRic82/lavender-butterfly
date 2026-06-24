@@ -403,6 +403,7 @@ p {
   position: relative;
   display: flex;
   align-items: center;
+  background: var(--bg);
   justify-content: center;
   width: 420px;
   max-width: 100%;
