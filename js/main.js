@@ -117,7 +117,7 @@
     const grid          = document.getElementById('productsGrid');
     const countDisplay  = document.getElementById('productsCount');
     const cards         = grid ? Array.from(grid.querySelectorAll('.product-card')) : [];
-    const filterBtns    = filterBar.querySelectorAll('.filter-btn');
+    const filterBtns    = filterBar.querySelectorAll('.filter-btn, .category-tile');
 
     function updateCount(visible) {
       if (!countDisplay) return;

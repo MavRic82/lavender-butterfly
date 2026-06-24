@@ -100,15 +100,40 @@
         </div>
       </div>
 
-      <!-- Filter Bar -->
-      <div class="filter-bar reveal" role="group" aria-label="Filter by category" id="filterBar">
-        <button class="filter-btn active" data-filter="all">All Pieces</button>
-        <button class="filter-btn" data-filter="crystal">Crystals</button>
-        <button class="filter-btn" data-filter="mineral">Minerals</button>
-        <button class="filter-btn" data-filter="geode">Geodes</button>
-        <button class="filter-btn" data-filter="jewelry">Jewelry</button>
-        <button class="filter-btn" data-filter="tumbled">Tumbled Stones</button>
-        <button class="filter-btn" data-filter="gift">Gifts &amp; Sets</button>
+      <!-- Category Visual Tiles -->
+      <div class="category-tiles reveal" role="group" aria-label="Filter by category" id="filterBar">
+        <button class="category-tile active" data-filter="all">
+          <img src="images/icon-minerals.png" alt="">
+          <span>All Pieces</span>
+        </button>
+        <button class="category-tile" data-filter="crystal">
+          <img src="images/icon-minerals.png" alt="">
+          <span>Crystals</span>
+        </button>
+        <button class="category-tile" data-filter="mineral">
+          <img src="images/icon-meteorites.png" alt="">
+          <span>Minerals</span>
+        </button>
+        <button class="category-tile" data-filter="geode">
+          <img src="images/icon-minerals.png" alt="">
+          <span>Geodes</span>
+        </button>
+        <button class="category-tile" data-filter="jewelry">
+          <img src="images/icon-jewelry.png" alt="">
+          <span>Jewelry</span>
+        </button>
+        <button class="category-tile" data-filter="tumbled">
+          <img src="images/icon-diy.png" alt="">
+          <span>Tumbled</span>
+        </button>
+        <button class="category-tile" data-filter="gift">
+          <img src="images/icon-gifts.png" alt="">
+          <span>Gifts</span>
+        </button>
+        <button class="category-tile" data-filter="carved">
+          <img src="images/icon-carvings.png" alt="">
+          <span>Carvings</span>
+        </button>
       </div>
 
       <p class="products-count" id="productsCount">Showing 12 pieces</p>
@@ -116,10 +141,32 @@
       <!-- Products Grid -->
       <div class="products-grid" id="productsGrid">
 
+        <!-- Meteorite Spotlight -->
+        <article class="product-card product-card--spotlight reveal" data-category="mineral">
+          <div class="product-card--spotlight__img">
+            <img src="images/meteorite.png" alt="Provenance-verified iron meteorite on display stand">
+            <span class="product-card__badge" style="top:var(--space-md);left:var(--space-md);right:auto;">Mineral</span>
+          </div>
+          <div class="product-card--spotlight__body">
+            <div class="spotlight-badge">★ One of a Kind</div>
+            <div class="product-card--spotlight__eyebrow">Featured Piece · Meteorite</div>
+            <h2 class="product-card--spotlight__name">Iron Meteorite — Provenance Verified</h2>
+            <p class="product-card__desc" style="max-width:44ch;">
+              A genuine iron meteorite with documented provenance, displayed on its custom museum-style mount.
+              The surface reveals classic Widmanstätten patterns — crystalline geometry that took billions of years
+              to form in the vacuum of space. Nothing else in the shop compares. This is a once-in-a-generation find.
+            </p>
+            <div class="product-card__footer" style="margin-top:var(--space-lg);">
+              <span class="product-card__sku">SKU #LB-0001 · Collector Grade</span>
+              <button class="btn--inquire" onclick="window.location.href='contact.html?item=Iron+Meteorite'">Inquire About This Piece</button>
+            </div>
+          </div>
+        </article>
+
         <!-- Card 1: Amethyst Cathedral -->
         <article class="product-card reveal" data-category="crystal">
           <div class="product-card__img">
-            <span class="product-card__placeholder" role="img" aria-label="Amethyst crystal">💜</span>
+            <img src="images/amethyst-cluster.png" alt="Amethyst Cathedral Geode" class="product-card__photo" loading="lazy">
             <span class="product-card__badge">Crystal</span>
           </div>
           <div class="product-card__body">
@@ -170,13 +217,13 @@
         <!-- Card 4: Crystal Pendant -->
         <article class="product-card reveal" data-category="jewelry">
           <div class="product-card__img">
-            <span class="product-card__placeholder" role="img" aria-label="Jewelry pendant">💍</span>
+            <img src="images/copper-pendant.png" alt="Copper Wire-Wrapped Crystal Pendant" class="product-card__photo" loading="lazy">
             <span class="product-card__badge">Jewelry</span>
           </div>
           <div class="product-card__body">
             <div class="product-card__category">Jewelry</div>
-            <h2 class="product-card__name">Rose Quartz Wire-Wrap Pendant</h2>
-            <p class="product-card__desc">A pale pink rose quartz point wrapped in oxidized copper wire with intricate botanical scrollwork. Hangs on an 18-inch copper chain. Handcrafted by a local Arizona artisan.</p>
+            <h2 class="product-card__name">Copper Wire-Wrapped Crystal Pendant</h2>
+            <p class="product-card__desc">An iridescent crystal point hand-coiled in warm copper wire with flowing botanical scrollwork. The stone shifts between rose and violet in natural light. Hangs on an 18-inch copper chain.</p>
             <div class="product-card__footer">
               <span class="product-card__sku">SKU #LB-0301</span>
               <button class="btn--inquire" onclick="window.location.href='contact.html?item=Rose+Quartz+Pendant'">Inquire</button>
@@ -255,7 +302,7 @@
         <!-- Card 9: Moonstone Ring -->
         <article class="product-card reveal reveal-delay-2" data-category="jewelry">
           <div class="product-card__img">
-            <span class="product-card__placeholder" role="img" aria-label="Moonstone ring">🌙</span>
+            <img src="images/icon-jewelry.png" alt="Wire-Wrapped Silver Ring" class="product-card__photo" loading="lazy">
             <span class="product-card__badge">Jewelry</span>
           </div>
           <div class="product-card__body">
