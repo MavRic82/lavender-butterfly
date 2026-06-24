@@ -397,43 +397,29 @@ p {
 }
 
 /* ============================================================
-   Butterfly Image + Animations
+   Butterfly SVG
    ============================================================ */
-.butterfly-wrap {
-  position: relative;
-  width: 420px;
+.butterfly-svg {
+  width: 400px;
   max-width: 100%;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-}
-
-.butterfly-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
+  overflow: visible;
   animation:
     butterflyFloat 4s ease-in-out infinite alternate,
     wingShimmer 2s ease-in-out infinite alternate;
 }
 
 @keyframes butterflyFloat {
-  0%   { transform: translateY(15px)  scale(1.0); }
-  100% { transform: translateY(-15px) scale(1.05); }
+  0%   { transform: translateY(15px); }
+  100% { transform: translateY(-15px); }
 }
 
 @keyframes wingShimmer {
-  0%   { filter: brightness(1.0) drop-shadow(0 0 24px rgba(184, 169, 212, 0.4)); }
-  100% { filter: brightness(1.3) drop-shadow(0 0 40px rgba(184, 169, 212, 0.7)); }
+  0%   { opacity: 0.85; }
+  100% { opacity: 1.0; }
 }
 
 @media (max-width: 768px) {
-  .butterfly-wrap { width: 280px; }
+  .butterfly-svg { width: 260px; }
 }
 
 /* ============================================================
