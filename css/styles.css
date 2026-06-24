@@ -403,16 +403,20 @@ p {
   position: relative;
   width: 420px;
   max-width: 100%;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
 }
 
 .butterfly-img {
   display: block;
   width: 100%;
   height: auto;
-  background: transparent;
-  mix-blend-mode: multiply;
-  border: none;
-  box-shadow: none;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
   animation:
     butterflyFloat 4s ease-in-out infinite alternate,
     wingShimmer 2s ease-in-out infinite alternate;
@@ -430,78 +434,6 @@ p {
 
 @media (max-width: 768px) {
   .butterfly-wrap { width: 280px; }
-}
-
-/* ============================================================
-   Butterfly SVG Animation (kept for fallback reference)
-   ============================================================ */
-.butterfly-wrap {
-  position: relative;
-  display: inline-block;
-}
-
-.butterfly-svg {
-  width: 180px;
-  height: 140px;
-  filter: drop-shadow(0 0 18px rgba(184, 169, 212, 0.45))
-          drop-shadow(0 0 48px rgba(201, 168, 76, 0.2));
-}
-
-/* Wing flap: left wing rotates around its right edge (the body center) */
-.wing-left {
-  transform-origin: 90px 70px;
-  animation: flap-left 4s var(--ease-in-out) infinite;
-}
-
-/* Wing flap: right wing rotates around its left edge */
-.wing-right {
-  transform-origin: 90px 70px;
-  animation: flap-right 4s var(--ease-in-out) infinite;
-}
-
-.wing-inner-left {
-  transform-origin: 90px 70px;
-  animation: flap-left 4s var(--ease-in-out) infinite;
-  animation-delay: 0.05s;
-}
-
-.wing-inner-right {
-  transform-origin: 90px 70px;
-  animation: flap-right 4s var(--ease-in-out) infinite;
-  animation-delay: 0.05s;
-}
-
-@keyframes flap-left {
-  0%, 100% { transform: rotateY(0deg) scaleX(1); }
-  40%, 60% { transform: rotateY(55deg) scaleX(0.4); }
-}
-
-@keyframes flap-right {
-  0%, 100% { transform: rotateY(0deg) scaleX(1); }
-  40%, 60% { transform: rotateY(-55deg) scaleX(0.4); }
-}
-
-.butterfly-svg .body {
-  animation: body-pulse 4s ease-in-out infinite;
-}
-
-@keyframes body-pulse {
-  0%, 100% { opacity: 1; }
-  45%, 55% { opacity: 0.75; }
-}
-
-/* Antennae gentle sway */
-.antenna {
-  transform-origin: 90px 18px;
-  animation: sway 4s ease-in-out infinite;
-}
-.antenna-right {
-  animation-delay: 0.2s;
-}
-
-@keyframes sway {
-  0%, 100% { transform: rotate(0deg); }
-  50%       { transform: rotate(3deg); }
 }
 
 /* ============================================================
@@ -1493,10 +1425,6 @@ p {
     height: 220px;
   }
 
-  .butterfly-svg {
-    width: 130px;
-    height: 100px;
-  }
 
   .categories__grid {
     grid-template-columns: 1fr 1fr;
