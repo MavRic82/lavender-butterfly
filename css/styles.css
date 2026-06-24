@@ -414,6 +414,7 @@ p {
   height: auto;
   opacity: 0;
   transition: opacity 0.6s ease;
+  mix-blend-mode: screen;
   filter: drop-shadow(0 0 32px rgba(184, 169, 212, 0.5))
           drop-shadow(0 0 80px rgba(201, 168, 76, 0.2));
   animation: butterfly-float 6s ease-in-out infinite;
