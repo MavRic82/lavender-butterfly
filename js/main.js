@@ -230,20 +230,6 @@
   }
 
   /* ----------------------------------------------------------
-     Butterfly video: fade in only after playing to prevent flash
-     ---------------------------------------------------------- */
-  function initButterflyVideo() {
-    var video = document.querySelector('.butterfly-video');
-    if (!video) return;
-
-    function reveal() { video.classList.add('ready'); }
-
-    video.addEventListener('playing', reveal, { once: true });
-    // Fallback: if already ready (cached), show immediately
-    if (video.readyState >= 3) reveal();
-  }
-
-  /* ----------------------------------------------------------
      Boot
      ---------------------------------------------------------- */
   function init() {
@@ -251,7 +237,6 @@
     initFilter();
     initContactForm();
     initSmoothScroll();
-    initButterflyVideo();
   }
 
   if (document.readyState === 'loading') {

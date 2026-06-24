@@ -397,42 +397,41 @@ p {
 }
 
 /* ============================================================
-   Butterfly Video
+   Butterfly Image + Animations
    ============================================================ */
-.butterfly-video-wrap {
+.butterfly-wrap {
   position: relative;
+  width: 420px;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 420px;
-  max-width: 100%;
-  background: #1a1128;
 }
 
-.butterfly-video {
+.butterfly-img {
+  position: absolute;
   width: 100%;
   height: auto;
-  opacity: 0;
-  transition: opacity 0.6s ease;
-  mix-blend-mode: normal;
   background: transparent;
   border: none;
-  filter: drop-shadow(0 0 32px rgba(184, 169, 212, 0.5))
-          drop-shadow(0 0 80px rgba(201, 168, 76, 0.2));
-  animation: butterfly-float 6s ease-in-out infinite;
+  box-shadow: none;
+  animation:
+    butterflyFloat 4s ease-in-out infinite alternate,
+    wingShimmer 2s ease-in-out infinite alternate;
 }
 
-.butterfly-video.ready {
-  opacity: 1;
+@keyframes butterflyFloat {
+  0%   { transform: translateY(15px)  scale(1.0); }
+  100% { transform: translateY(-15px) scale(1.05); }
 }
 
-@keyframes butterfly-float {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-14px); }
+@keyframes wingShimmer {
+  0%   { filter: brightness(1.0) drop-shadow(0 0 24px rgba(184, 169, 212, 0.4)); }
+  100% { filter: brightness(1.2) drop-shadow(0 0 40px rgba(184, 169, 212, 0.7)); }
 }
 
 @media (max-width: 768px) {
-  .butterfly-video-wrap { width: 280px; }
+  .butterfly-wrap { width: 280px; }
 }
 
 /* ============================================================
