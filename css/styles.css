@@ -397,12 +397,15 @@ p {
 }
 
 /* ============================================================
-   Butterfly SVG
+   Butterfly Image
    ============================================================ */
-.butterfly-svg {
+.butterfly-img {
   width: 400px;
   max-width: 100%;
-  overflow: visible;
+  display: block;
+  background: transparent;
+  border: none;
+  box-shadow: none;
   animation:
     butterflyFloat 4s ease-in-out infinite alternate,
     wingShimmer 2s ease-in-out infinite alternate;
@@ -414,12 +417,12 @@ p {
 }
 
 @keyframes wingShimmer {
-  0%   { opacity: 0.85; }
-  100% { opacity: 1.0; }
+  0%   { opacity: 0.85; filter: drop-shadow(0 0 18px rgba(184,169,212,0.3)); }
+  100% { opacity: 1.0;  filter: drop-shadow(0 0 36px rgba(184,169,212,0.6)); }
 }
 
 @media (max-width: 768px) {
-  .butterfly-svg { width: 260px; }
+  .butterfly-img { width: 260px; }
 }
 
 /* ============================================================
